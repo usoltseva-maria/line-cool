@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ЛАЙН | структура | сайт со статьями по сценаристике</title>
+    <link rel="stylesheet" type="text/css" href="style 2.css">
+</head>
+
+<body>
+    <header class="header">
+        <header class="site-header">
+            <a href="index.html" class="logo-link">
+            <img src="kartinki/logoo.svg" alt="Логотип" class="logo-icon">
+            <span class="logo-text">ЛАЙН</span>
+            </a>
+        </header>
+        <nav class="menu">
+            <button class="nav-btn">случайный совет</button>
+            <button class="nav-btn">начинающему сценаристу</button>
+            <button class="nav-btn">правила оформления</button>
+            <button class="nav-btn">профиль</button>
+        </nav>
+    </header>
+    
+    <div class="overlay" id="popup-overlay">
+        <div class="popup">
+            <h2 class="popup-title">Войти с помощью</h2>
+            <div class="social-buttons">
+                 <a href="#" class="footer-icon1">
+                    <img src="kartinki/vk.svg" alt="VK">
+                </a>
+                 <a href="#" class="footer-icon1">
+                    <img src="kartinki/tg min.svg" alt="TG">
+                </a>
+                 <a href="#" class="footer-icon1">
+                    <img src="kartinki/gogl.svg" alt="Google">
+                </a>
+            </div>
+            <div class="divider">или</div>
+            <form class="login-form">
+                <input type="text" placeholder="Имя пользователя" name="username" required>
+                <input type="password" placeholder="Пароль" name="password" required>
+                <button type="submit" class="login-btn">Войти</button>
+                <button class="register-btn">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+   <script>
+    const profileBtn = Array.from(document.querySelectorAll('.nav-btn'))
+                            .find(btn => btn.textContent.trim().toLowerCase() === 'профиль');
+
+    const popupOverlay = document.getElementById('popup-overlay');
+
+    profileBtn.addEventListener('click', () => {
+        if (popupOverlay.style.display === 'flex') {
+            popupOverlay.style.display = 'none';
+        } else {
+            popupOverlay.style.display = 'flex';
+        }
+    });
+
+    popupOverlay.addEventListener('click', (e) => {
+        if (e.target === popupOverlay) {
+            popupOverlay.style.display = 'none';
+        }
+    });
+</script>
+
+<div class="folder-container">
+    <div class="tabs">
+        <button class="tab" onclick="handleTabClick(event, 'index.html')">персонажи</button>
+    </div>
+
+    <script>function handleTabClick(event, url) {
+    activateTab(event); 
+    window.location.href = url;
+    }
+    </script>
+
+
+    <div class="folder">
+        <div class="folder-header">
+            <div class="black-line"></div>
+            <h2 class="B52">Особенности <br> речевого стиля <br> персонажа</h2>
+        </div>
+
+        <div class="folder-body">
+            <div class="text">
+                <p>
+                    Данная статья посвящена анализу характеристик речевого <br>
+                    стиля персонажа, его индивидуальных черт, а также влияния <br>
+                    ситуации и контекста на его речь. В ней рассматриваются <br>
+                    основные лингвистические особенности, формирующие <br>
+                    узнаваемость образа, а также роль речевых изменений внутри <br>
+                    различных ситуаций. Работа поможет понять, как язык <br>
+                    отражает личность и психологическое состояние героя.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function activateTab(event) {
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => tab.classList.remove('active'));
+    event.currentTarget.classList.add('active');
+}
+</script>
+
+    <section class="content">
+
+        <div class="article">
+            <div class="article-block">
+        
+
+                <div class="article-flow">
+                    <div class="article-text">
+                        <h2>Как формируется характерная речь персонажа</h2>
+                        <p><span class="highlight">Речевая манера персонажа</span> — это результат сложного взаимодействия различных 
+                            факторов, которые создают его уникальный голос. В основе лежит его личностная 
+                            составляющая — характер, темперамент, жизненный опыт и профессиональная сфера 
+                            деятельности. Всё это отражается через использование определённого лексического 
+                            набора: одни персонажи предпочитают просторечия и жаргон, другие — сложные слова 
+                            и литературные выражения. Такой выбор говорит о социальном статусе, образовании 
+                            и культурной принадлежности героя. <span class="highlight">Речевая манера персонажа</span> формируется под влиянием 
+                            множества факторов: образования, социальной среды, профессии, возраста, 
+                            географического происхождения и личного опыта. Эти элементы создают уникальный 
+                            языковой портрет героя. Например, молодой трудящийся или подросток, 
+                            находящийся в процессе формирования своего стиля, может предпочитать сленг 
+                            и короткие фразы, а учёный или профессионал — более сложные конструкции 
+                            и терминологию. Речевая манера персонажа — это результат сложного взаимодействия 
+                            различных факторов, которые создают его уникальный голос. В основе лежит его личностная составляющая — характер, темперамент, жизненный опыт 
+                        и профессиональная сфера деятельности. Всё это отражается через использование 
+                        определённого лексического набора: одни персонажи предпочитают просторечия 
+                        и жаргон, другие — сложные слова и литературные выражения. Такой выбор говорит 
+                        о социальном статусе, образовании и культурной принадлежности героя.</p>
+                    </div>
+
+                    <div class="article-image">
+                        <img src="kartinki/img1.png" alt="Диалог персонажей">
+                    </div>
+                </div>
+                <div class="article-flow">
+                
+                    <div class="left-image-col">
+                        <img src="kartinki/shema 1.png" alt="Схема формирования речи персонажа">
+                    </div>
+
+                    <div class="main-text">
+                        <p>
+                        Помимо лексики, важны особенности синтаксиса — длина и сложность предложений, 
+                        использование вопросительных, восклицательных и повелительных форм, 
+                        а также характерные стилевые приёмы. Некоторые персонажи могут говорить 
+                        короткими, резкими фразами, что подчёркивает их эмоциональную взволнованность 
+                        или подавленность, другие — длинными, развёрнутыми предложениями, что говорит 
+                        о рассудительности или хладнокровии. <span class="highlight">Интонационные особенности</span>, 
+                        такие как паузы, ударения и темп, помогают моделировать настроение и психологическое 
+                        состояние героя — например, заложить драматизм или иронию.
+                        </p>
+
+                        <p>
+                        Произношение и диалектные особенности существенно дополняют картину, усиливая 
+                        узнаваемость персонажа и создавая местный колорит. Можно представить, что каждый 
+                        герой словно обладает своим «звуковым отпечатком», что помогает читателю 
+                        или зрителю легко его запомнить и ассоциировать с определённым образом.
+                        </p>
+
+                        <p>
+                        В литературе такой детальный моделинг речи — один из наиболее эффективных 
+                        методов авторского характера, позволяющий создавать объёмные и многогранные 
+                        портреты. В итоге, через особенности речи автор раскрывает внутренний мир, ценности, 
+                        моральные ориентиры и психологическое состояние героя без прямых описаний — 
+                        всё через язык, через его нюансы и особенности. В литературе такой детальный 
+                        моделинг речи — один из наиболее эффективных методов авторского характера, 
+                        позволяющий создавать объёмные и многогранные портреты.
+                        </p>
+
+                    
+                    </div>
+                </div>
+                <div class="image-2-col">
+                    <img src="kartinki/people.png" alt="Персонажи">
+                </div>
+                    <div class="article-flow">
+                        <div class="article-text">
+                             <h2>Влияние ситуации и контекста на речь</h2>
+                            <p>
+                                <span class="highlight">Речь персонажа</span> — это не статичная характеристика, а динамический и адаптирующийся к обстоятельствам процесс. В различных ситуациях и в разное время персонаж использует разные стили и регистры речи, что отражает его личностные особенности, эмоциональное состояние и цели коммуникации. Например, в дружеской беседе 
+                                с близкими или товарищами он может говорить проще, употреблять разговорные выражения, жаргон или шутливые фразы, что создает ощущение неформальности 
+                                и доверия. В противоположность этому, при общении с начальством или в официальных обстоятельствах его речь становится более осторожной, корректной, с использованием условных и более сложных лингвистических конструкций. Речь персонажа — 
+                                это не статичная характеристика, а динамический и адаптирующийся к обстоятельствам процесс. В различных ситуациях и в разное время персонаж использует разные стили 
+                                и регистры речи, что отражает его личностные особенности, эмоциональное состояние 
+                                и цели коммуникации. Например, в дружеской беседе с близкими или товарищами 
+                                он может говорить проще, употреблять разговорные выражения, жаргон или шутливые фразы, что создает ощущение неформальности и доверия.
+                            </p>
+                        </div>
+
+                    <div class="article-image">
+                        <img src="kartinki/shema 2.png" alt="Диалог персонажей">
+                    </div>
+                </div>
+                <div class="article-flow">
+                        <div class="article-text">
+                             
+                            <p>
+                                <span class="highlight">Внутренние психологические состояния</span> — страх, гнев, волнение — трансформируются 
+                                в особенности речи. Например, в состоянии тревоги герой может говорить быстро, запинаясь, употребляя повторяющиеся слова, или даже некорректно выражая свои мысли. Гнев проявляется в резких, коротких фразах, повышенной громкости 
+                                и использовании агрессивных выражений. Радость и восторг, наоборот, могут выражаться через энтузиазм, длинные цепочки положительных эмоций или даже смех 
+                                и шутки. Ритм и интонация речи отражают внутренние переживания, что помогает слушателю или читателю понять эмоциональную глубину героя. Дополнительно, характер речи напрямую связан с социальным, культурным и профессиональным контекстом. Например, молодёжная речь будет отличаться от речи взрослого человека или специалиста в профессиональной области. Эти различия усиливают реализм персонажа и помогают создать его многогранность. <span class="highlight">Анализ изменений в речи</span>
+                                в различных ситуациях помогает понять, на каком уровне находится личность героя, насколько она гибка и адаптивна. Такой подход позволяет глубже вникнуть 
+                                в психологию, ценности и привычки героя, делая образ более сложным 
+                                и правдоподобным. Дополнительно, характер речи напрямую связан с социальным, культурным и профессиональным контекстом. Например, молодёжная речь будет отличаться от речи взрослого человека или специалиста в профессиональной области. Эти различия усиливают реализм персонажа и помогают создать его многогранность. Анализ изменений в речи в различных ситуациях помогает понять, на каком уровне находится личность героя, насколько она гибка и адаптивна. 
+                            </p>
+                        </div>
+
+                    <div class="article-image">
+                        <img src="kartinki/people 4 shtuki.png" alt="Диалог персонажей">
+                    </div>
+                </div>
+                <div class="article-flow">
+                        <div class="article-text">
+                             
+                           
+                        </div>
+
+                    <div class="article-authors">
+                        Авторы: Широкова Екатерина, Романов Евгений
+                    </div>
+                </div>
+                <div class="sources">
+                    <h3>Список источников и литературы</h3>
+                    <ol>
+                        <li>Аристотель. Поэтика. — М., 1983.</li>
+                        <li>Каменистая Т. К. Диалог в художественном тексте. — СПб., 2005.</li>
+                        <li>Лотман Ю. М. Структура художественного текста. — М., 1970.</li>
+                        <li>Макки Р. История на миллион долларов. — М., 2014.</li>
+                        <li>Триандашвили И. В. Язык и культура. — М., 2002.</li>
+                    </ol>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+</div>
+
+<section class="cards">
+        <script>
+            function togglePin(event) {
+             event.stopPropagation();
+             const icon = event.currentTarget.querySelector('.pin-icon');
+             icon.classList.toggle('pinned');
+            }
+        </script>
+
+        <section class="tg-channel">
+            <div class="tg-content">
+                <p>Хотите узнать, правдоподобно ли прописан ваш персонаж?</p>
+                <a href="#" class="tg-button">
+                получить обратную связь
+                </a>
+            </div>
+        </section>
+
+        <div class="card">
+            <button class="pin-btn" data-card-id="6">
+                <img src="kartinki/no.svg" class="pin-icon">
+
+            </button>
+            <label for="pin6" class="pin"></label>
+            <div class="card-image">
+                 <img src="kartinki/5.png" alt="фотография 5">
+             </div>
+            <h3 class="card-title">Диалог как инструмент <br> раскрытия персонажа: диалог <br> как инструмент раскрытия</h3>
+            <p class="card-text">
+                Практические советы по написанию диалогов, которые <br>
+                раскрывают характер, эмоции и прошлое героя. <br>
+                Эти рекомендации помогают создать естественные <br>
+                и выразительные беседы, делая героев более живыми <br>
+                и убедительными для зрителя.        
+            </p>
+        </div>
+
+        <div class="card">
+           <button class="pin-btn" data-card-id="6">
+                <img src="kartinki/no.svg" class="pin-icon">
+
+            </button>
+            <label for="pin6" class="pin"></label>
+            <div class="card-image">
+                 <img src="kartinki/6.png" alt="фотография 6">
+             </div>
+            <h3 class="card-title">Второстепенные персонажи: <br> почему второстепенные <br> персонажи так важны?</h3>
+            <p class="card-text">
+                Почему даже второстепенные герои играют важную <br>
+                роль и как их правильно интегрировать в общую <br>
+                историю. Это способствует созданию насыщенного <br>
+                и правдоподобного мира, в котором каждый персонаж <br>
+                выполняет свою уникальную функцию и влияет <br>
+                на развитие сюжета.
+            </p>
+        </div>
+
+    </section>
+
+<footer class="footer">
+    <div class="footer-left">
+        <a href="index.html" class="logo-link2">
+        <img src="kartinki/logooo.svg" alt="Логотип2" class="logo-icon2">
+        <span class="logo-text2">ЛАЙН</span>
+        </a>
+
+
+        <div class="footer-icons">
+      <a href="#" class="footer-icon">
+        <img src="kartinki/tg.svg" alt="Telegram">
+      </a>
+      <a href="#" class="footer-icon">
+        <img src="kartinki/yt.svg" alt="YouTube">
+      </a>
+      <a href="#" class="footer-icon">
+        <img src="kartinki/pint.svg" alt="Pinterest">
+      </a>
+      <a href="#" class="footer-icon">
+        <img src="kartinki/boost.svg" alt="Boosty">
+      </a>
+    </div>
+    </div>
+
+    <div class="footer-right">
+      <button class="footer-btn">обратная связь</button>
+      <button class="footer-btn">о нас</button>
+    </div>
+</footer>
+
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const ICON_EMPTY = 'kartinki/no.svg';
+        const ICON_FILLED = 'kartinki/yes.svg';
+        const STORAGE_KEY = 'pinnedCards';
+
+        let pinnedCards = [];
+        try {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            pinnedCards = saved ? JSON.parse(saved) : [];
+        } catch (e) {
+            console.warn('Ошибка чтения localStorage:', e);
+        }
+
+        document.querySelectorAll('.pin-btn').forEach(btn => {
+            const cardId = btn.dataset.cardId;
+            const img = btn.querySelector('.pin-icon');
+            
+    
+            const isPinned = pinnedCards.includes(cardId);
+            img.src = isPinned ? ICON_FILLED : ICON_EMPTY;
+            btn.setAttribute('aria-pressed', isPinned);
+
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const currentlyPinned = pinnedCards.includes(cardId);
+                
+                if (currentlyPinned) {
+                
+                    pinnedCards = pinnedCards.filter(id => id !== cardId);
+                    img.src = ICON_EMPTY;
+                    btn.setAttribute('aria-pressed', 'false');
+                } else {
+                
+                    pinnedCards.push(cardId);
+                    img.src = ICON_FILLED;
+                    btn.setAttribute('aria-pressed', 'true');
+                }
+                
+
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(pinnedCards));
+            });
+        });
+
+        document.querySelectorAll('.card input[type="checkbox"], .card label.pin').forEach(el =>{
+            el.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+        });
+    });
+</script>
+
+</html>
